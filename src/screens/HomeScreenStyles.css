@@ -1,0 +1,10 @@
+.homeScreenContainer{
+    display: flex;
+}
+
+.sidebar{
+    width:25%
+}
+.graph{
+    width: 70%;
+}

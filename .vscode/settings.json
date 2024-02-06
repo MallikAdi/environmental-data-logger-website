@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.ejs": "html",
+        "OSTut.C": "cpp"
+    }
+}
