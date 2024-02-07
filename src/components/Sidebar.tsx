@@ -17,9 +17,6 @@ const Sidebar = () => {
         <p className="sidebarQuantityMessage">It's a good day to sleep in!</p>
         </div>
       </div>
-      <div className="sidebarFooter">
-        5 icons
-      </div>
     </div>
   )
 }
