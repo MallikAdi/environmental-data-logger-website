@@ -26,11 +26,11 @@ const Graph: React.FC<Props> = ({ temperatureData }) => {
               {
                 label: 'Temperature',
                 data: temperatureData,
-                borderColor: 'rgb(75, 192, 192)',
+                borderColor: '#7286D3',
                 tension: 0.4,
                 fill:{
                   target:'origin',
-                  above:'rgba(75,192,192,0.2)'
+                  above:'rgba(114, 134, 211,0.2)'
                 }
               },
             ],
@@ -68,7 +68,7 @@ const Graph: React.FC<Props> = ({ temperatureData }) => {
       <canvas 
         ref={chartRef} 
         style={{
-          width:'90%',
+          width:'80%',
           margin:'auto'
         }}
     />
