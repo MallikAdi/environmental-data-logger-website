@@ -10,7 +10,7 @@ const Sidebar = () => {
         <span className="sidebarQuantityTitle">Temperature</span>
       </div>
       <div className="sidebarBody">
-        <img className="sidebarQuantityGIF" src={require('../assets/quantityIcons/temperature.gif')} alt="loading..." />
+        <img className="sidebarQuantityGIF" src={require('../assets/quantityIcons/temperature.png')} alt="loading..." />
         <div className="sidebarQuantityText">
         <p className="sidebarQuantityCurrentValue">Current Value</p>
         <p className="sidebarQuantityAverageValue">Average Value</p>

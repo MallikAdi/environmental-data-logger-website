@@ -3,17 +3,18 @@
 
 /******         Sidebar styles                  ********/
 .sidebarContainer{
-    background-color: red;
+    /* background-color: red; */
     height: 100vh;
     display: flex;
     flex-direction: column;
     /* padding: 10px; */
+    background-image: url('../assets/quantityIcons/background1.jpeg');
 }
 
 .sidebarHeader{
     height: 15%;
     width: 100%;
-    background-color: blue;
+    /* background-color: blue; */
     display: flex;
     display: flex;
     align-items: center;
@@ -22,7 +23,7 @@
 }
 
 .sidebarQuantityTitle{
-    color: white;
+    color: black;
     font-size: 40px;
     font-family: "Hedvig Letters Serif", serif;
     font-optical-sizing: auto;
@@ -32,7 +33,7 @@
 
 .sidebarBody{
     /* background-color: white; */
-    background-image: url('../assets/quantityIcons/background1.jpeg');
+    
     height:85%;
     display: flex;
     flex-direction: column;
@@ -41,10 +42,9 @@
 }
 
 .sidebarQuantityGIF{
-    height: 35%;
+    height: 20%;
     width: auto;
     justify-self: flex-start;
-    flex:1;
     /* margin-top: 15px;
     margin-bottom: 15px;  */
     
