@@ -26,7 +26,7 @@
 
 .sidebarQuantityTitle{
     color: black;
-    font-size: 40px;
+    font-size: 45px;
     font-family: 'Bayon', sans-serif;
 }
 
@@ -49,34 +49,41 @@
     
 }
 
+/*  removed this from sidebar.tsx 
 .sidebarQuantityText{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-}
+    justify-content: space-evenly;
+} */
 
 
 .sidebarQuantityValues{
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: 55%;
+    justify-content: space-around;
+    /* justify-content: center; */
     /* gap:40px; */
 }
 
-.sidebarQuantity, .sidebarQuantityValue {
+.sidebarQuantityCurrentValueDiv, .sidebarQuantityAverageValueDiv {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    /* gap: 3px; */
     align-items: center;
     color: black;
-    font-size: 30px;
     font-family: 'Bellota', system-ui;
+    height: 150px;
 }
 
-.sidebarQuantityValue {
-    margin-top: 5px; /* Adjust the margin-top to reduce the gap */
+.sidebarQuantitySpan{
+    font-size: 30px;
 }
 
-
-
+.sidebarValueSpan{
+    font-size: 40px;
+}
 
 /* .sidebarQuantityCurrentValue{
     color: black;
