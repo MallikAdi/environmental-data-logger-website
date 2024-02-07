@@ -1,3 +1,6 @@
+/*font for sidebar heading */
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=MuseoModerno:ital,wght@0,600;1,600&display=swap');
+
 /******         Sidebar styles                  ********/
 .sidebarContainer{
     background-color: red;
@@ -20,11 +23,64 @@
 
 .sidebarQuantityTitle{
     color: white;
+    font-size: 40px;
+    font-family: "Hedvig Letters Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .sidebarBody{
-    background-color: orange;
-    height:75%
+    background-color: white;
+    height:75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.sidebarQuantityGIF{
+    height: 35%;
+    width: auto;
+    justify-self: flex-start;
+    flex:1;
+    /* margin-top: 15px;
+    margin-bottom: 15px;  */
+    
+}
+
+.sidebarQuantityText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex:1.5
+}
+
+.sidebarQuantityCurrentValue{
+    color: black;
+    font-size: 30px;
+    font-family: "Hedvig Letters Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.sidebarQuantityAverageValue{
+    color: black;
+    font-size: 30px;
+    font-family: "Hedvig Letters Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.sidebarQuantityMessage{
+    color: black;
+    font-size: 20px;
+    font-family: "Hedvig Letters Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
 }
 
 .sidebarFooter{
