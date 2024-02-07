@@ -1,5 +1,6 @@
 /*font for sidebar heading */
-@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=MuseoModerno:ital,wght@0,600;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bayon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellota:wght@300;400&display=swap');
 /* colour palette  https://colorhunt.co/palette/7286d38ea7e9e5e0fffff2f2 */
 
 /******         Sidebar styles                  ********/
@@ -26,10 +27,7 @@
 .sidebarQuantityTitle{
     color: black;
     font-size: 40px;
-    font-family: "Hedvig Letters Serif", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+    font-family: 'Bayon', sans-serif;
 }
 
 .sidebarBody{
@@ -55,33 +53,26 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    flex:1.5
 }
 
 .sidebarQuantityCurrentValue{
     color: black;
     font-size: 30px;
-    font-family: "Hedvig Letters Serif", serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
+    font-family: 'Bellota', system-ui;
 }
 
 .sidebarQuantityAverageValue{
     color: black;
     font-size: 30px;
-    font-family: "Hedvig Letters Serif", serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
+    font-family: 'Bellota', system-ui;
 }
 
 .sidebarQuantityMessage{
     color: black;
     font-size: 20px;
-    font-family: "Hedvig Letters Serif", serif;
+    font-family: 'Bellota', system-ui;
     font-optical-sizing: auto;
-    font-weight: 200;
+    font-weight: 700;
     font-style: normal;
 }
 

@@ -17,10 +17,15 @@ const Sidebar:React.FC<Props> = ({temperatureData}) => {
       <div className="sidebarBody">
         <img className="sidebarQuantityGIF" src={require('../assets/quantityIcons/temperature.png')} alt="loading..." />
         <div className="sidebarQuantityText">
-        <p className="sidebarQuantityCurrentValue">Current Value</p>
-        <p className="sidebarQuantityCurrentValue">{temperatureData[0]}</p>
-        <p className="sidebarQuantityAverageValue">Average Value </p>
-        <p className="sidebarQuantityAverageValue">{avgTemp} </p>
+        <div className='sidebarQuantityCurrentValue'>
+          <p>Current</p>
+          <p>{temperatureData[0]}°C</p>
+        </div>
+        <div className="sidebarQuantityAverageValue">
+          <p>Average</p>
+          <p>{avgTemp}°C</p>
+        </div>
+        
         <p className="sidebarQuantityMessage">It's a good day to sleep in!</p>
         </div>
       </div>
