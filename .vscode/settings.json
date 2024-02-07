@@ -2,5 +2,8 @@
     "files.associations": {
         "*.ejs": "html",
         "OSTut.C": "cpp"
-    }
+    },
+    "cSpell.words": [
+        "chartjs"
+    ]
 }
