@@ -55,17 +55,44 @@
     justify-content: space-around;
 }
 
-.sidebarQuantityCurrentValue{
+
+.sidebarQuantityValues{
+    display:flex;
+    flex-direction: column;
+    /* gap:40px; */
+}
+
+.sidebarQuantity, .sidebarQuantityValue {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: black;
     font-size: 30px;
     font-family: 'Bellota', system-ui;
+}
+
+.sidebarQuantityValue {
+    margin-top: 5px; /* Adjust the margin-top to reduce the gap */
+}
+
+
+
+
+/* .sidebarQuantityCurrentValue{
+    color: black;
+    font-size: 30px;
+    font-family: 'Bellota', system-ui;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebarQuantityAverageValue{
     color: black;
     font-size: 30px;
     font-family: 'Bellota', system-ui;
-}
+    display: flex;
+    flex-direction: column;
+} */
 
 .sidebarQuantityMessage{
     color: black;
