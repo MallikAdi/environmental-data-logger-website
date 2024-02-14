@@ -1,12 +1,32 @@
 .App {
-  /*padding-top: 35px;
-  height: 90vh;
-  width: 90vw;
   display: flex;
-  justify-content: center;
-  align-items: center;*/
+  flex-direction: row;
+  width: 100vh;
+  height: 100vh;
+}
+
+.lower-layer{
+  display: flex;
+  flex-direction: row;
+  background-color: #696195;
+}
+
+.strip {
+  margin-top: 20px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.icon{
+  font-size: 40px;
+  color: #E5E0FF;
   text-align: center;
-  
+  font-weight: bold;
+}
+
+.main-content {
+    width: 80%;
+    display: flex;
 }
 
 .App-logo {

@@ -3,8 +3,9 @@
 }
 
 .sidebar{
-    width:35%
+    width:50vh;
+
 }
 .graph{
-    width: 70%;
+    width: 153.5vh;
 }

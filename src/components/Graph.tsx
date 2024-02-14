@@ -1,6 +1,6 @@
-import React, { useRef, useEffect } from 'react';
-import Chart from 'chart.js/auto';
-import './ComponentStyles.css'
+import React, { useRef, useEffect } from "react";
+import Chart from "chart.js/auto";
+import "./ComponentStyles.css";
 
 interface Props {
   temperatureData: number[];
@@ -16,22 +16,22 @@ const Graph: React.FC<Props> = ({ temperatureData }) => {
     }
 
     if (chartRef.current && temperatureData.length > 0) {
-      const ctx = chartRef.current.getContext('2d');
+      const ctx = chartRef.current.getContext("2d");
       if (ctx) {
         chartInstance.current = new Chart(ctx, {
-          type: 'line',
+          type: "line",
           data: {
             labels: Array.from(Array(temperatureData.length).keys()),
             datasets: [
               {
-                label: 'Temperature',
+                label: "Temperature",
                 data: temperatureData,
-                borderColor: '#7286D3',
+                borderColor: "#7286D3",
                 tension: 0.4,
-                fill:{
-                  target:'origin',
-                  above:'rgba(114, 134, 211,0.2)'
-                }
+                fill: {
+                  target: "origin",
+                  above: "rgba(114, 134, 211,0.2)",
+                },
               },
             ],
           },
@@ -40,13 +40,13 @@ const Graph: React.FC<Props> = ({ temperatureData }) => {
               x: {
                 title: {
                   display: true,
-                  text: 'Time',
+                  text: "Time",
                 },
               },
               y: {
                 title: {
                   display: true,
-                  text: 'Temperature (°C)',
+                  text: "Temperature (°C)",
                 },
               },
             },
@@ -64,14 +64,16 @@ const Graph: React.FC<Props> = ({ temperatureData }) => {
   }, [temperatureData]);
 
   return (
-    <div className="graphContainer">
-      <canvas 
-        ref={chartRef} 
-        style={{
-          width:'80%',
-          margin:'auto'
-        }}
-    />
+    <div className="graph-lower-layer">
+      <div className="graphContainer">
+        <canvas
+          ref={chartRef}
+          style={{
+            width: "80%",
+            margin: "auto",
+          }}
+        />
+      </div>
     </div>
   );
 };
