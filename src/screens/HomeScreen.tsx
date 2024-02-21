@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Sidebar from "../components/Sidebar";
 import Graph from "../components/Graph";
 import "../screens/HomeScreenStyles.css";
@@ -20,31 +20,64 @@ interface Props {
 }
 
 const HomeScreen: React.FC<Props> = ({ data }) => {
-  console.log("Fetched Data:", data);
-  const temperatureData = data ? data.map((item) => item.Temp) : [];
+  const [activeData, setActiveData] = useState<number[]>([]);
+  const [activeDataType, setActiveDataType] = useState<string>("");
+
+  useEffect(() => {
+    // Set default active data to temperature data when component mounts
+    if (data && data.length > 0) {
+      setActiveData(data.map((item) => item.Temp));
+      setActiveDataType("Temperature");
+    }
+  }, [data]);
+
+  const handleIconClick = (dataType: string) => {
+    switch (dataType) {
+      case "temperature":
+        setActiveDataType("Temperature");
+        setActiveData(data.map((item) => item.Temp));
+        break;
+      case "rain":
+        setActiveDataType("Rain");
+        setActiveData(data.map((item) => item.Rain));
+        break;
+      case "humidity":
+        setActiveDataType("Humidity");
+        setActiveData(data.map((item) => item.Hum));
+        break;
+      case "soil":
+        setActiveDataType("Soil Moisture");
+        setActiveData(data.map((item) => item.SoilM));
+        break;
+      default:
+        setActiveData([]);
+        break;
+    }
+  };
+
   return (
     <div className="homeScreenContainer">
       <div className="lower-layer">
         <div className="strip">
-          <span className="icon">
+          <span className="icon" onClick={() => handleIconClick("temperature")}>
             <FaTemperatureEmpty />
           </span>
-          <span className="icon">
+          <span className="icon" onClick={() => handleIconClick("rain")}>
             <IoRainySharp />
           </span>
-          <span className="icon">
+          <span className="icon" onClick={() => handleIconClick("humidity")}>
             <TbDroplet />
           </span>
-          <span className="icon">
+          <span className="icon" onClick={() => handleIconClick("soil")}>
             <MdOutlineLineStyle />
           </span>
         </div>
 
         <div className="sidebar">
-          <Sidebar temperatureData={temperatureData} />
+          <Sidebar temperatureData={activeData} parameter={activeDataType} />
         </div>
         <div className="graph">
-          <Graph temperatureData={temperatureData} />
+          <Graph temperatureData={activeData} />
         </div>
       </div>
     </div>

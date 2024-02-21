@@ -3,9 +3,10 @@ import "./ComponentStyles.css";
 
 interface Props {
   temperatureData: number[];
+  parameter: string;
 }
 
-const Sidebar: React.FC<Props> = ({ temperatureData }) => {
+const Sidebar: React.FC<Props> = ({ temperatureData, parameter }) => {
   const avgTemp =
     temperatureData.length > 0
       ? temperatureData.reduce((acc, curr) => acc + curr, 0) /
@@ -15,7 +16,7 @@ const Sidebar: React.FC<Props> = ({ temperatureData }) => {
   return (
     <div className="sidebarContainer">
       <div className="sidebarHeader">
-        <span className="sidebarQuantityTitle">Temperature</span>
+        <span className="sidebarQuantityTitle">{parameter}</span>
       </div>
       <div className="sidebarBody">
         <img
