@@ -10,3 +10,31 @@
 .graph{
     width: 75%;
 }
+
+.strip {
+    margin-top: 20px;
+    width: 4%;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon {
+    font-size: 40px;
+    color: #E5E0FF;
+    text-align: center;
+    font-weight: bold;
+}
+
+.lower-layer {
+    display: flex;
+    flex-direction: row;
+    background-color: #696195;
+    width: 100%;
+}
+
+
+
+.main-content {
+    width: 96%;
+    display: flex;
+}
