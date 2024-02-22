@@ -137,6 +137,7 @@
     margin-top: 60px;
 }
 
+
 .button,
 .buttonSelected {
     width: 150px;
@@ -148,4 +149,11 @@
     font-size: 20px;
     margin: 0 10px;
     border-color: rgb(134, 134, 193);
+    border: solid 1px;
+    border-radius: 40px;
+    outline: none;
+}
+
+.buttonSelected{
+    box-shadow: inset 3px 2px 1.5px 1px rgba(0, 0, 0, 0.4);
 }
