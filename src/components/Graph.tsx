@@ -4,9 +4,11 @@ import "./ComponentStyles.css";
 
 interface Props {
   temperatureData: number[];
+  parameter: string;
+  unit: string;
 }
 
-const Graph: React.FC<Props> = ({ temperatureData }) => {
+const Graph: React.FC<Props> = ({ temperatureData, parameter, unit }) => {
   const chartRef = useRef<HTMLCanvasElement>(null);
   const chartInstance = useRef<Chart | null>(null); // Store reference to chart instance
   const [chartType, setChartType] = useState<"daily" | "weekly" | "monthly">(
@@ -32,7 +34,7 @@ const Graph: React.FC<Props> = ({ temperatureData }) => {
               ),
               datasets: [
                 {
-                  label: "Weekly Average Temperature",
+                  label: `Weekly Average ${parameter}`,
                   data: weeklyAverages,
                   backgroundColor: "rgba(114, 134, 211,0.7)",
                   borderWidth: 3,
@@ -45,7 +47,7 @@ const Graph: React.FC<Props> = ({ temperatureData }) => {
                   beginAtZero: true,
                   title: {
                     display: true,
-                    text: "Temperature (°C)",
+                    text: `${parameter} ${unit}`,
                   },
                 },
                 x: {
@@ -68,7 +70,7 @@ const Graph: React.FC<Props> = ({ temperatureData }) => {
               ),
               datasets: [
                 {
-                  label: "Monthly Average Temperature",
+                  label: `Monthly Average ${parameter}`,
                   data: monthlyAverages,
                   backgroundColor: "rgba(114, 134, 211,0.7)",
                   borderWidth: 3,
@@ -81,7 +83,7 @@ const Graph: React.FC<Props> = ({ temperatureData }) => {
                   beginAtZero: true,
                   title: {
                     display: true,
-                    text: "Temperature (°C)",
+                    text: `${parameter} ${unit}`,
                   },
                 },
                 x: {
@@ -100,7 +102,7 @@ const Graph: React.FC<Props> = ({ temperatureData }) => {
               labels: Array.from(Array(temperatureData.length).keys()),
               datasets: [
                 {
-                  label: "Temperature",
+                  label: `${parameter}`,
                   data: temperatureData,
                   borderColor: "#7286D3",
                   tension: 0.4,
@@ -122,7 +124,7 @@ const Graph: React.FC<Props> = ({ temperatureData }) => {
                 y: {
                   title: {
                     display: true,
-                    text: "Temperature (°C)",
+                    text: `${parameter} ${unit}`,
                   },
                 },
               },

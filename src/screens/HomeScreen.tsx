@@ -87,7 +87,11 @@ const HomeScreen: React.FC<Props> = ({ data }) => {
           />
         </div>
         <div className="graph">
-          <Graph temperatureData={activeData} />
+          <Graph
+            temperatureData={activeData}
+            parameter={activeDataType}
+            unit={unit}
+          />
         </div>
       </div>
     </div>
