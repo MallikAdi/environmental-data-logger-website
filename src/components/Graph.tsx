@@ -47,7 +47,7 @@ const Graph: React.FC<Props> = ({ temperatureData, parameter, unit }) => {
                   beginAtZero: true,
                   title: {
                     display: true,
-                    text: `${parameter} ${unit}`,
+                    text: `${parameter} (${unit})`,
                   },
                 },
                 x: {
@@ -83,7 +83,7 @@ const Graph: React.FC<Props> = ({ temperatureData, parameter, unit }) => {
                   beginAtZero: true,
                   title: {
                     display: true,
-                    text: `${parameter} ${unit}`,
+                    text: `${parameter} (${unit})`,
                   },
                 },
                 x: {
@@ -124,7 +124,7 @@ const Graph: React.FC<Props> = ({ temperatureData, parameter, unit }) => {
                 y: {
                   title: {
                     display: true,
-                    text: `${parameter} ${unit}`,
+                    text: `${parameter} (${unit})`,
                   },
                 },
               },
