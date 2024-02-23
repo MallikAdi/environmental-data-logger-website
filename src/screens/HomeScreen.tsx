@@ -65,16 +65,36 @@ const HomeScreen: React.FC<Props> = ({ data }) => {
     <div className="homeScreenContainer">
       <div className="lower-layer">
         <div className="strip">
-          <span className="icon" onClick={() => handleIconClick("temperature")}>
+          <span
+            className={`icon ${
+              activeDataType === "Temperature" ? "selected" : "notSelected"
+            }`}
+            onClick={() => handleIconClick("temperature")}
+          >
             <FaTemperatureEmpty />
           </span>
-          <span className="icon" onClick={() => handleIconClick("rain")}>
+          <span
+            className={`icon ${
+              activeDataType === "Rain" ? "selected" : "notSelected"
+            }`}
+            onClick={() => handleIconClick("rain")}
+          >
             <IoRainySharp />
           </span>
-          <span className="icon" onClick={() => handleIconClick("humidity")}>
+          <span
+            className={`icon ${
+              activeDataType === "Humidity" ? "selected" : "notSelected"
+            }`}
+            onClick={() => handleIconClick("humidity")}
+          >
             <TbDroplet />
           </span>
-          <span className="icon" onClick={() => handleIconClick("soil")}>
+          <span
+            className={`icon ${
+              activeDataType === "Soil Moisture" ? "selected" : "notSelected"
+            }`}
+            onClick={() => handleIconClick("soil")}
+          >
             <MdOutlineLineStyle />
           </span>
         </div>

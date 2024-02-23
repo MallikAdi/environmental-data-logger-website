@@ -16,6 +16,7 @@
     width: 4%;
     display: flex;
     flex-direction: column;
+    gap:2px;
 }
 
 .icon {
@@ -23,6 +24,17 @@
     color: #E5E0FF;
     text-align: center;
     font-weight: bold;
+    transition: 0.5s;
+}
+
+.icon:hover{
+    transform: scale(1.3);
+}
+
+.selected{
+    color: black;
+    transform: scale(1.3);
+    
 }
 
 .lower-layer {
