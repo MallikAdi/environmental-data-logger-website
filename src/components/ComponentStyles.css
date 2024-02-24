@@ -153,6 +153,7 @@
     border-radius: 40px;
     outline: none;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .buttonSelected{
