@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import HomeScreen from "./screens/HomeScreen";
+import LoginScreen from "./screens/LoginScreen";
 
 function App() {
   const [data, setData] = useState<any>(null);
@@ -29,9 +30,10 @@ function App() {
 
   return (
     <div className="App">
-      <div className="lower-layer">
+      <LoginScreen />
+      {/* <div className="lower-layer">
         <HomeScreen data={data} />
-      </div>
+      </div> */}
     </div>
   );
 }
