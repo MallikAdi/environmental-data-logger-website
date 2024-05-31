@@ -21,17 +21,19 @@ import "./LoginScreenStyles.css";
 
 const fetchData = (username: string, password: string, setData: any) => {
   fetch(
-    `https://www.irflabs.in/gedl/get10.php?DevId=G00456&user=abcd&pass=d1234&R=14`
+    `https://www.irflabs.in/gedl/get10.php?DevId=G00456&user=abcd&pass=d1234&R=14`,
+    {
+      mode: "no-cors",
+    }
   )
     .then((response) => {
       if (!response.ok) {
         throw new Error("Failed to fetch data");
       }
-      return response.json();
+      return response.text(); // Note: Cannot parse JSON in no-cors mode
     })
-    .then((jsonData) => {
-      setData(jsonData);
-      console.log(jsonData);
+    .then((text) => {
+      console.log(text);
     })
     .catch((error) => {
       console.error("Error fetching data:", error);
