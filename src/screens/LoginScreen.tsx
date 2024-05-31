@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./LoginScreenStyles.css";
 
-const fetchData = (username: string, password: string, setData: any) => {
+/* const fetchData = (username: string, password: string, setData: any) => {
   fetch(
     `https://cors-anywhere.herokuapp.com/https://www.irflabs.in/gedl/edllogin.php?userId=${username}&pass=${password}`
   )
@@ -13,6 +13,25 @@ const fetchData = (username: string, password: string, setData: any) => {
     })
     .then((jsonData) => {
       setData(jsonData);
+    })
+    .catch((error) => {
+      console.error("Error fetching data:", error);
+    });
+}; */
+
+const fetchData = (username: string, password: string, setData: any) => {
+  fetch(
+    `https://www.irflabs.in/gedl/get10.php?DevId=G00456&user=abcd&pass=d1234&R=14`
+  )
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Failed to fetch data");
+      }
+      return response.json();
+    })
+    .then((jsonData) => {
+      setData(jsonData);
+      console.log(jsonData);
     })
     .catch((error) => {
       console.error("Error fetching data:", error);
