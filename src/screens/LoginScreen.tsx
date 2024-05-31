@@ -20,20 +20,16 @@ import "./LoginScreenStyles.css";
 }; */
 
 const fetchData = (username: string, password: string, setData: any) => {
-  fetch(
-    `https://www.irflabs.in/gedl/get10.php?DevId=G00456&user=abcd&pass=d1234&R=14`,
-    {
-      mode: "no-cors",
-    }
-  )
+  fetch(`/gedl/get10.php?DevId=G00456&user=abcd&pass=d1234&R=14`)
     .then((response) => {
       if (!response.ok) {
         throw new Error("Failed to fetch data");
       }
-      return response.text(); // Note: Cannot parse JSON in no-cors mode
+      return response.json();
     })
-    .then((text) => {
-      console.log(text);
+    .then((jsonData) => {
+      setData(jsonData);
+      console.log(jsonData);
     })
     .catch((error) => {
       console.error("Error fetching data:", error);
